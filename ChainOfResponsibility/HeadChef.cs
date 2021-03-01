@@ -7,6 +7,10 @@ namespace ChainOfResponsibility
     /// </summary>
     public class HeadChef : Approver
     {
+        /// <summary>
+        /// Handle request.
+        /// </summary>
+        /// <param name="purchase"> The query data being checked. </param>
         public override void Handle(PurchaseOrder purchase)
         {
             if (purchase.Price < 1000)
